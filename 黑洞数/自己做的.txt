@@ -1,0 +1,103 @@
+```c
+//也许是错的
+
+
+#include<stdio.h>
+//#include<math.h>
+int max(int x)
+	{int d,e,f;
+int y;	
+int a,b,c;
+	a=x/100;
+	b=(x-100*a)/10;
+	c=x%10;
+
+if(a>b)
+		d=a;
+	else d=b;
+	if(d>c)
+		d=d;
+	else d=c;
+	if(a<b)
+		e=a;
+	else e=b;
+	if(e<c)
+		e=e;
+	else e=c;
+	if(a!=e&&a!=d)
+		f=a;	
+	else if(b!=e&&b!=d)
+		f=b;else	if(c!=e&&c!=d)
+		f=c;
+	y=100*d+10*f+e;
+	return y;}
+
+int min(int x)
+{	int d,e,f;
+	int y;
+	int a,b,c;
+	a=x/100;
+	b=(x-100*a)/10;
+	c=x%10;if(a>b)
+	d=a;
+	else d=b;
+		if(d>c)
+			d=d;
+			else d=c;
+if(a<b)
+	e=a;
+		else e=b;
+			if(e<c)
+				e=e;
+				else e=c;
+if(a!=e&&a!=d)
+	f=a;
+
+
+
+else	if(b!=e&&b!=d)
+		f=b;
+else	if(c!=e&&c!=d)
+		f=c;
+y=100*e+10*f+d;
+	 return y;
+
+
+
+}
+/*int sub(int x)
+{	
+	int z;
+	z=max(x)-min(x); 
+	return z;
+}*/
+int hedong(int x)
+{	int i;
+	int z;
+	int j;
+	for(i=1;i;i++)
+	{
+	z=max(x)-min(x);	
+	j=x;
+	x=z;
+	if(x==j)
+		break;
+	}
+	return i;
+}
+
+
+
+
+
+
+//StudybarCommentBegin
+main()
+{int a;
+ scanf("%d",&a);
+ printf("%d",hedong(a));
+}
+//StudybarCommentEnd
+```
+
+

@@ -1,0 +1,26 @@
+```c
+# include <stdio.h>
+
+int main()
+{
+
+	int a,b,c,n,i;
+	scanf("%d",&n);
+	a=1;
+	b=1;
+	if(n<=2)
+		c=1;
+		
+	for (i=3;i<=n;i++)
+	{
+	
+	c=a+b;
+	a=b;	
+	b=c;
+	}
+	printf("%d",b);
+
+return 0;
+}
+```
+

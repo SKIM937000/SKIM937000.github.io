@@ -1,0 +1,20 @@
+```c
+#include <stdio.h>
+void d2b(int n,int t)
+{
+    if(t)
+    {
+        d2b(n/2,t-1);
+        printf("%d",n%2);
+        return;
+    }
+}
+int main(void) 
+{
+	int m;
+	scanf("%d",&m);
+    d2b(m,8);
+    return 0;
+}
+```
+

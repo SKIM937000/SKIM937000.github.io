@@ -1,0 +1,31 @@
+```c
+# include <stdio.h>
+
+int main ()
+{
+	int x;
+	scanf("%d",&x);
+	if (x>=100)
+	{if (x<=150)
+	printf("y\n");
+	else printf("n\n");
+	}
+	else {if(x>=80)
+		printf("w\n");
+	else{if (x>=60)
+		printf("h\n");
+	else {if(x>=40)
+		printf("s\n");
+	else {if(x>=20)
+		printf("q\n");
+	else {if (x>=10)
+	printf("a\n");
+	else printf("d\n");}
+	}
+	}
+	}
+	}
+return 0;
+}
+```
+

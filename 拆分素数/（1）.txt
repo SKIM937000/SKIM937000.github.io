@@ -1,0 +1,39 @@
+```c
+ #include<stdio.h>
+
+# include<math.h>
+
+int isprime(int y)
+{
+  int i;
+    for(i = 2; i <= sqrt(y); i ++)
+    {
+        if(y%i==0) return 0;
+    }
+    return 1;
+}
+
+int main()
+{
+int i,j,c,d;
+int x;
+scanf("%d",&x);
+if(x%2!=0||x<7)
+printf("Input an even num (>=6)");
+else{
+for(i=2;i<=(x/2);i++)
+{
+c=isprime(i);
+j=x-i;
+d=isprime(j);
+if(c==1&&d==1)
+{
+printf("%d+%d",i,j);break;
+}
+
+}
+}
+return 0;
+}
+```
+

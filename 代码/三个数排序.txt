@@ -1,0 +1,31 @@
+```c
+# include<stdio.h>
+
+int main()
+{	
+
+	double a,b,c,d;
+	scanf("%lf%lf%lf",&a,&b,&c);
+	 if ((a>b)&&(a>c))
+	 {if(b>c)
+	 {a=a;b=b;c=c;}
+		 if(c>b) 
+		 {		 d=b;b=c;c=d;}}
+
+  if ((b>a)&&(b>c))
+  {if(a>c)
+  {d=b;b=a;a=d;}
+		 if(c>a)
+		 {d=a;a=b;b=c;c=a;}}
+     if ((c>a)&&(c>b))
+	 {if(b>a)
+	 {d=a;a=c;c=d;}
+	else
+	{d=a;a=c;c=b;b=d;}}
+	  printf("%.0lf ",c);
+ printf("%.0lf ",b);
+ printf("%.0lf ",a);
+	return 0; 
+}
+```
+

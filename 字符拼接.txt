@@ -1,0 +1,13 @@
+
+
+```c
+#include<stdio.h>
+
+int main(){
+char s[20];
+gets(s);
+printf("My name is ");
+puts(s);
+return 0;}
+```
+

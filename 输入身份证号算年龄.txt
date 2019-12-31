@@ -1,0 +1,19 @@
+```c
+#include<stdio.h>
+
+int main(){
+    char ID[19];
+    int year=0,i;
+    scanf("%s",&ID);
+    for(i=6;i<=9;i++)
+    year=10*year+(ID[i]-'0');
+    printf("%d",2018-year);
+    if((ID[16]-'0')%2==1)
+    printf("男\n");
+    else
+    printf("女\n");
+    return 0;}
+
+
+```
+

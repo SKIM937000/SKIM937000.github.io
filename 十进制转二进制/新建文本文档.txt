@@ -1,0 +1,21 @@
+```c
+#include <stdio.h>
+int main()
+{int i=0;
+
+int a;
+int j;
+int bin[32];
+scanf("%d", &a);
+
+while(a>0)
+{
+bin[i]=a%2;
+a/=2;
+i++;
+}
+for(j=i-1;j>=0;j--)
+{printf("%d",bin[j]);}
+}
+```
+

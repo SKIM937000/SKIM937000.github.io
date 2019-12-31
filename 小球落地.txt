@@ -1,0 +1,30 @@
+一球从M米高度自由下落，每次落地后返回原高度的一半，再落下。它在第N次落地时反弹多高？它在第N次落地时共经过多少米（不包括反弹的那部分）？保留两位小数
+输入
+M N
+输出
+它在第N次落地时反弹多高？共经过多少米？保留两位小数，空格隔开，放在一行
+样例输入
+1000 5
+
+样例输出
+31.25 2875.00
+
+```c
+#include<stdio.h>
+#include<math.h>
+int main(){
+double M;
+double sum,k;
+int i,j,N;
+scanf("%lf %d",&M,&N);
+sum=M;
+for(i=1;i<N;i++)
+{
+	sum+=2*M/pow(2,i);
+}
+printf("%.2lf %.2lf",M/pow(2,N),sum);
+    return 0;}
+```
+
+
+

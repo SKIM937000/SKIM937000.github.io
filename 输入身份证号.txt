@@ -1,0 +1,81 @@
+1。编写一函数，判断输入是否是一个合法身份证号（最后一位正确），返回0（不是）或者1（是）。
+
+2。编写一函数，[计算](http://studybar.cau.edu.cn/mod/assignment/view.php?id=33715)出身份证号码对应的年龄，返回年龄值。
+
+主函数中输入一个身份证号码，调用上面2个函数，如果是合法身份证号（最后一位正确）在主函数中输出年龄，否则在主函数中输出error [id](http://studybar.cau.edu.cn/mod/assignment/view.php?id=33497)。
+
+```c
+#include<stdio.h>
+#include<string.h>
+int main()
+{	char t[18];
+char law(char s[18]);
+int  year(char ID[18]);
+	gets(t);
+
+	if(law(t)==1)
+
+printf("%d",year(t));
+	else
+		printf("error id");
+	return 0;
+}
+char law(char s[18])
+{
+	int i,sum=0;
+	char k;
+	int a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17;
+//	scanf("%s",s);
+for(i=0;i<18;i++)
+	{
+	s[i]= s[i]-'0' ;}
+a1=7*s[0];
+a2=9*s[1];
+a3=10*s[2];
+a4=5*s[3];
+a5=8*s[4];
+a6=4*s[5];
+a7=2*s[6];
+a8=s[7];
+a9=6*s[8];
+a10=3*s[9];
+a11=7*s[10];
+a12=9*s[11];
+a13=10*s[12];
+a14=5*s[13];
+a15=8*s[14];
+a16=4*s[15];
+a17=2*s[16];
+sum=a1+a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16+a17;
+i=sum%11;
+switch(i)
+{
+case 0:k=1;break;
+case 1:k=0;break;
+case 2:k='X';break;
+case 3:k=9;break;
+case 4:k=8;break;
+case 5:k=7;break;
+case 6:k=6;break;
+case 7:k=5;break;
+case 8:k=4;break;
+case 9:k=3;break;
+case 10:k=2;break;
+
+}
+if(s[17]==k)
+return 1;
+else
+return 0;}
+
+int  year(char S[18]){
+    int year=0,i;
+  //  scanf("%s",&ID);
+    for(i=6;i<=9;i++)
+	{ year=10*year+(S[i]-0);
+	}
+	year=2019-year;
+    return year;} 
+```
+
+
